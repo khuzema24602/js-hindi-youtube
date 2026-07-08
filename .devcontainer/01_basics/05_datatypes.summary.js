@@ -21,3 +21,6 @@ age:15
 const myfunc=function(){
     console.log("hello world");
 }
+// stack(premitive),heap(non-premitive)
+let myyoutubename = "khuzemagoraya"
+let anothername=myyoutubename
