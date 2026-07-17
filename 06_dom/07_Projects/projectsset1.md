@@ -59,3 +59,14 @@ form.addEventListener("submit", function (e) {
     }
 });
 ```
+##project 3 solution
+
+```javascript
+const clock=document.querySelector('#clock')
+// const clock=document.getelementbyid('clock')
+setInterval(function(){
+  let date=new Date()
+  // console.log(date.tolocaltimestring())
+  clock.innerHTML=date.toLocaleTimeString()
+},1000)
+```
