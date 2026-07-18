@@ -155,3 +155,54 @@ newGamebutton.addEventListener('click',function(e){
 })
 }
 ```
+```javascript
+##project 5 Async JS
+//generate a random color
+const randomcolor=function(){
+  const hex='123456789ABCDEF'
+  let color='#'
+for(i=0;i<6;i++){
+  color+=hex[Math.floor(Math.random()*16)
+  ]
+}
+return color
+}
+let intervalId
+const startchangingcolor=function(){
+  if(!intervalId){
+    intervalId=setInterval(changebgbcolor,1000)
+  }
+  function changebgbcolor(){
+    document.body.style.backgroundColor=randomcolor()
+  }
+}
+const stopchangingcolor=function(){
+  clearInterval(intervalId)
+  intervalId=null
+}
+document.querySelector('#start').addEventListener('click',startchangingcolor)
+document.querySelector('#stop').addEventListener('click',stopchangingcolor)
+```
+```javascript
+##project 5 Async JS
+const insert = document.getElementById('insert');
+
+window.addEventListener('keydown', (e) => {
+  insert.innerHTML = `
+    <div class="color">
+      <table>
+        <tr>
+          <th>Key</th>
+          <th>KeyCode</th>
+          <th>Code</th>
+        </tr>
+        <tr>
+          <td>${e.key === ' ' ? 'Space' : e.key}</td>
+          <td>${e.keyCode}</td>
+          <td>${e.code}</td>
+        </tr>
+      </table>
+    </div>
+  `;
+});
+```
